@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <div class="player" id="player">
+    <video id="video" playsinline src="https://pixabay.com/videos/download/video-42470_tiny.mp4?attachment"></video>
+
+    <div class="show-controls">
+      <div class="controls-container">
+
+        <div class="progress-range" id="progress-range" title='Seek'>
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="controls-group">
+
+          <div class="controls-left">
+
+            <div class="play-controls">
+              <i class="fas fa-play" id="play-btn" title='Play'></i>
+            </div>
+
+            <div class="volume-controls">
+              <div class="volume-icon">
+                <i class="fas fa-volume-up" id="volume-btn" title='Mute'></i>
+              </div>
+              <div class="volume-range" id="volume-range" title='Change Volume'>
+                <div class="volume-bar" id="volume-bar"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="controls-right">
+
+            <div class="playback-rate-controls" title='Playback Rate'>
+              <select name="playbackRate" id="playback-rate" class="playback-rate">
+                <option value="0.5">0.5 x</option>
+                <option value="0.75">0.75 x</option>
+                <option value="1" selected>1 x</option>
+                <option value="1.5">1.5 x</option>
+                <option value="2">2 x</option>
+              </select>
+            </div>
+
+            <div class="time">
+              <span id="current-time" class="time-elapsed">00:00 /</span>
+              <span id="duration-time" class="time-duration">2:38</span>
+            </div>
+
+            <div class="fullscreen" id="fullscreen-btn">
+              <i class="fas fa-expand"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
